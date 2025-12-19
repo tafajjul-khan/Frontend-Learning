@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.kesri {
+    align-items: center;
+    justify-content: center;
+  background-color: #ff7722;
+  border: 2px solid white;
+  margin: 20px;
+  margin-bottom: 0;
+  padding: 120px;
+  box-sizing: border-box;
+}
+.white {
+  background-color: white;
+  border: 2px solid white;
+  margin: 20px;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 100px;
+  box-sizing: border-box;
+}
+
+.wheel {
+    height: 100px;
+    width: 100px;
+    border: 1px solid darkblue;
+    border-radius: 50px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.wheel .line {
+    height: 100%;
+    width: 1px;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    background: darkblue;
+}
+.line:nth-child(1) {
+    transform: rotate(15deg)
+}
+
+.line:nth-child(2) {
+    transform: rotate(30deg)
+}
+
+.line:nth-child(3) {
+    transform: rotate(45deg)
+}
+
+.line:nth-child(4) {
+    transform: rotate(60deg)
+}
+
+.line:nth-child(5) {
+    transform: rotate(75deg)
+}
+
+.line:nth-child(6) {
+    transform: rotate(90deg)
+}
+
+.line:nth-child(7) {
+    transform: rotate(105deg)
+}
+
+.line:nth-child(8) {
+    transform: rotate(120deg)
+}
+
+.line:nth-child(9) {
+    transform: rotate(135deg)
+}
+
+.line:nth-child(10) {
+    transform: rotate(150deg)
+}
+
+.line:nth-child(11) {
+    transform: rotate(165deg)
+}
+
+.line:nth-child(12) {
+    transform: rotate(180deg)
+}
+.green {
+  background-color: green;
+  border: 2px solid white;
+  margin: 20px;
+  margin-top: 0;
+  padding: 120px;
+  box-sizing: border-box;
+}
