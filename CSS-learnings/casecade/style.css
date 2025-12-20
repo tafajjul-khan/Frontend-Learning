@@ -1,0 +1,19 @@
+.box {
+    background-color: blue;
+    padding: 10px;
+}
+
+p{
+    color: yellow;
+    margin: 0;
+    padding: 0;
+}
+
+#outer-box {
+    padding: 4px;
+    border: 10px solid brown;
+}
+.white-text {
+    padding: 8px;
+    background-color: rgb(255, 0, 0);
+}
