@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    background-color: rgb(28, 59, 71);
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+.item {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(60, 255, 0);
+    border: 2px solid black;
+}
+
+#rotate-x:hover {
+    transform: rotateX(45deg);
+}
+#rotate-y:hover {
+    transform: rotateY(45deg);
+}
+#rotate-z:hover {
+    transform: rotateZ(45deg);
+}
+
+#translate-x:hover{
+    transform: translateX(100px);
+}
+#translate-y:hover{
+    transform: translateY(100px);
+}
+#translate-z:hover{
+    transform: perspective(300px) translateZ(100px);
+}
+
+#scale-x:hover{
+    transform: scaleX(1.5);
+}
+#scale-y:hover{
+    /* transform: scaleY(1.5); */
+    transform: skewY(30deg);
+}
+#scale-z:hover{
+    transform: perspective(300px) scaleZ(3) rotateY(45deg);
+}
