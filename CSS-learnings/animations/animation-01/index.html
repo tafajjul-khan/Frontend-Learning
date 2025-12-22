@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animations in css</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        margin: 40px;
+        width: 50vw;
+        height: 50vh;
+        background-color: antiquewhite;
+        border: 5px solid black;
+      }
+      .box {
+        margin: 20px;
+        width: 200px;
+        height: 50px;
+        border: 2px solid white;
+        border-radius: 10px;
+        background-color: gold;
+        position: relative;
+        /* animation-name: rightMovment;
+            animation-duration: 5s;
+            animation-iteration-count: infinite; */
+        /* animation-delay: 2s; */
+        /* animation-timing-function: linear; */
+        /* animation-timing-function: cubic-bezier(1, -0.4, 1,1);
+            animation-direction: alternate; */
+        /* duration | easing-function | delay | iteration-count 
+        | fill-mode | play-state | name | */
+        /* animation: 3s cubic-bezier(1, -0.4, 1, 1) 1s 2 alternate rightMovment; */
+      }
+
+      .animate-box-1 {
+        animation: 3s linear 1s infinite alternate rightMovment;
+      }
+
+      @keyframes rightMovment {
+        from {
+          top: 0;
+          left: 0;
+        }
+        to {
+          top: 0;
+          left: 500px;
+        }
+      }
+      .box-2 {
+        top: 130px;
+        margin: 20px;
+        width: 200px;
+        height: 50px;
+        border: 2px solid white;
+        border-radius: 10px;
+        background-color: gold;
+        position: relative;
+      }
+
+      .animate-box-2 {
+        animation: 3s ease-in 1s infinite alternate leftMovment;
+      }
+
+      @keyframes leftMovment {
+        from {
+          top: 130px;
+          left: 500px;
+        }
+        to {
+          top: 130px;
+          left: 0px;
+        }
+      }
+
+      .circle {
+        position: relative;
+        top: 20%;
+        left: 50%;
+        margin: 20px;
+        width: 50px;
+        height: 50px;
+        border: 2px solid gold;
+        border-radius: 100px;
+        background-color: white;
+      }
+      .animate-circle {
+        animation: 10s ease-in 1s infinite alternate downupMovment;
+      }
+      @keyframes downupMovment {
+        0% {
+          top: 1%;
+          left: 5%;
+        }
+        30% {
+          top: 5%;
+          left: 90%;
+        }
+        60% {
+          top: 38%;
+          left: 10%;
+        }
+        100% {
+          top: 42%;
+          left: 90%;
+        }
+      }
+
+      .start-btn {
+        position: relative;
+        margin: 20px;
+        width: 50px;
+        height: 50px;
+        border: 2px solid gold;
+        border-radius: 100px;
+        background-color: white;
+        left: 400px;
+      }
+      .stop-btn {
+        position: relative;
+        margin: 20px;
+        width: 50px;
+        height: 50px;
+        border: 2px solid gold;
+        border-radius: 100px;
+        background-color: white;
+        left: 400px;
+      }
+    </style>
+  </head>
+  <body>
+      <button class="start-btn" id="start-btn">Start</button>
+      <button class="stop-btn" id="stop-btn">Stop</button>
+    <div class="container">
+      <div class="box" id="box"></div>
+      <div class="circle" id="circle"></div>
+      <div class="box-2" id="box-2"></div>
+    </div>
+    <script>
+      const startButton = document.getElementById("start-btn");
+      const stopButton = document.getElementById("stop-btn");
+      const box = document.getElementById("box");
+      const box2 = document.getElementById("box-2");
+      const circle = document.getElementById("circle");
+     startButton.addEventListener("click", () => {
+        box.classList.add("animate-box-1") 
+        box2.classList.add("animate-box-2") 
+        circle.classList.add("animate-circle") 
+      });
+     stopButton.addEventListener("click", () => {
+        box.classList.remove("animate-box-1") 
+        box2.classList.remove("animate-box-2") 
+        circle.classList.remove("animate-circle") 
+      });
+    </script>
+  </body>
+</html>
