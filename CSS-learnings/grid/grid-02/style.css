@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    background-color: bisque;
+    display: grid;
+    gap: 0.5rem;
+    padding: 4rem;
+    border: 2px solid white;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+    place-self: center;
+}
+
+.items {
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+    border: 5px solid rgb(19, 15, 15);
+    /* justify-self: center; /* End of shell column end in horizontal shell*/;
+    /* align-self: center; verticlly  */
+    place-self: center;
+}
